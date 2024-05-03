@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de Participation</title>
+</head>
+<body>
+    <div class="min-w-screen min-h-screen flex items-center justify-center px-5 py-5">
+        <div class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style="max-width:1000px">
+            <div class="w-full py-10 px-5 md:px-10">
+                <div class="text-center mb-7 mx-auto flex flex-col items-center">
+                    <h1 class="font-bold text-3xl text-gray-900">Confirmation de Participation</h1>
+                </div>
+                <div class="mb-5">
+                    <p>Merci, {{ prenom }} {{ nom }}, pour votre participation. Votre transaction a été confirmée avec succès.</p>
+                </div>
+                <div class="mb-5">
+                    <p>Détails de la transaction :</p>
+                    <ul>
+                        <li><strong>Prénom:</strong> {{ prenom }}</li>
+                        <li><strong>Nom:</strong> {{ nom }}</li>
+                        <li><strong>Numéro de téléphone:</strong> {{ numero }}</li>
+                        <li><strong>Montant de participation:</strong> {{ montant }} CFA</li>
+                    </ul>
+                </div>
+                <div class="flex -mx-3">
+                    <div class="w-full px-3 mb-5">
+                        <a href="{% url 'home' %}" class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-green-700 focus:bg-green-700 text-white rounded-lg px-3 py-3 font-semibold">Retour à l'accueil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
